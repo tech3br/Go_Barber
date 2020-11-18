@@ -12,9 +12,13 @@ export default createGlobalStyle`
     color: #FFF;
     -webkit-font-smoothing: antialiased;
   }
-  body, input, button {
-    font-family: 'Roboto Slab', serif;
+  body, input {
+    font-family: 'Nunito', serif;
     font-size: 16px;
+  }
+
+  button {
+    font-size: 18px;
   }
   h1, h2, h3, h4, h5, h6, strong {
     font-weight: 500;
