@@ -14,7 +14,7 @@ export const Content = styled.div`
   align-items: center;
   place-content: center;
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
 
   form {
     margin: 80px 0px;
@@ -41,7 +41,7 @@ export const Content = styled.div`
   > a {
     color: #ff9000;
     display: block;
-    margin-top: 12px;
+    margin-top: 4px;
     text-decoration: none;
     transition: color 0.2s;
     display: flex;
