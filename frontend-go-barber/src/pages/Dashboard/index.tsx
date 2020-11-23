@@ -1,5 +1,4 @@
 import React from 'react';
-import { getJSDocReturnType } from 'typescript';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
