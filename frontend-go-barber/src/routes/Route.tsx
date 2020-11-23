@@ -1,9 +1,10 @@
 import React from 'react';
 import {
-  Redirect,
   Route as ReactDOMRoute,
   RouteProps as ReactDOMRouteProps,
+  Redirect,
 } from 'react-router-dom';
+
 import { useAuth } from '../hooks/auth';
 
 interface RouteProps extends ReactDOMRouteProps {
@@ -26,6 +27,7 @@ const Route: React.FC<RouteProps> = ({
           <Component />
         ) : (
           <Redirect
+            exact
             to={{
               pathname: isPrivate ? '/' : '/dashboard',
               state: { from: location },

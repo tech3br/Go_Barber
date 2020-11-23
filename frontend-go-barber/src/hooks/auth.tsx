@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
-/* eslint-disable no-console */
 import React, { createContext, useCallback, useContext, useState } from 'react';
+
 import api from '../services/api';
 
 interface AuthState {
@@ -13,13 +13,13 @@ interface SignInCredentials {
   password: string;
 }
 
-interface AuthContextProps {
+interface AuthContextData {
   user: object;
   signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
 }
 
-const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
+const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<AuthState>(() => {
@@ -61,7 +61,7 @@ const AuthProvider: React.FC = ({ children }) => {
   );
 };
 
-function useAuth(): AuthContextProps {
+function useAuth(): AuthContextData {
   const context = useContext(AuthContext);
 
   if (!context) {
